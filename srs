@@ -1,0 +1,34 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("EsHub - Speed Run Simulator ", "Ocean")
+
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
+
+    MainSection:NewToggle("Auto Click", "Automatically Gets Clicks", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+            wait(0)
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("AddSpeed"):FireServer()
+        end
+    end)
+
+
+MainSection:NewToggle("Auto Get In Race", "Automatically Gets In race", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+            wait(0)
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RaceTrigger"):FireServer()
+        end
+    end)
+    
+    MainSection:NewToggle("Auto Rebirth", "Rebirth's You", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+            wait(0)
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rebirth"):FireServer()
+        end
+    end)
+
