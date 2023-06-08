@@ -1,0 +1,162 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("EsHub - Strongman Simulator ", "Ocean")
+
+local MainTab = Window:NewTab("Main")
+local MainSection = MainTab:NewSection("Main")
+
+MainSection:NewToggle("Auto Get strength", "Automatically Gets strength", function(v)
+        getgenv().autoswing = v
+        while true do
+            if not getgenv().autoswing then return end
+            wait(0)
+local args = {
+    [1] = 2,
+    [2] = "Default"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("StrongMan_UpgradeStrength"):InvokeServer(unpack(args))
+
+        end
+    end)
+local PetsTab = Window:NewTab("Pets")
+local PetsSection = PetsTab:NewSection("Pets")
+
+PetsSection:NewButton("lobbyPet", "pets", function()
+    local args = {
+    [1] = "LobbyShop"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+PetsSection:NewButton("TrainingPet", "pets", function()
+local args = {
+    [1] = "1Training"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+PetsSection:NewButton("FoodPet", "pets", function()
+local args = {
+    [1] = "2Food"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+PetsSection:NewButton("ArcadePet", "pets", function()
+local args = {
+    [1] = "3Aracde"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+
+PetsSection:NewButton("FarmPet", "pets", function()
+local args = {
+    [1] = "4Farm"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+PetsSection:NewButton("Medieval Pet", "pets", function()
+local args = {
+    [1] = "5Medieval"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+PetsSection:NewButton("Steampunk Pet", "pets", function()
+local args = {
+    [1] = "6Steampunk"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSPetShopRoll"):InvokeServer(unpack(args))
+end)
+
+    local TeleTab = Window:NewTab("Teleport")
+local TeleSection = TeleTab:NewSection("Teleport")
+
+TeleSection:NewButton("Teleport 1", "ButtonInfo", function()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 2", "ButtonInfo", function()
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 3", "ButtonInfo", function()
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 4", "ButtonInfo", function()
+local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 5", "ButtonInfo", function()
+local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 6", "ButtonInfo", function()
+local args = {
+    [1] = 6
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 7", "ButtonInfo", function()
+local args = {
+    [1] = 7
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 8", "ButtonInfo", function()
+local args = {
+    [1] = 8
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 9", "ButtonInfo", function()
+local args = {
+    [1] = 9
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
+
+TeleSection:NewButton("Teleport 10", "ButtonInfo", function()
+local args = {
+    [1] = 10
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("TGSTeleportSimple_Teleport"):InvokeServer(unpack(args))
+end)
